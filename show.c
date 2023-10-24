@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-void print_user_details(struct User *user)
+void print_user_details(const struct User *user)
 {
   if (user == NULL)
     return;
@@ -11,7 +11,7 @@ void print_user_details(struct User *user)
   printf("User id: %ld, name: @%s, full name: '%s'\n", user->id, user->name, user->full_name);
 }
 
-void show_on_select(struct User *user, unsigned long int index)
+void show_on_select(const struct User *user, unsigned long int index)
 {
   print_user_details(user);
 }
